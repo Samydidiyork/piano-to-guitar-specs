@@ -66,12 +66,31 @@ Accordage standard de référence :
 |-------|------|------|
 | 6 (grave) | Mi2 | 40 |
 | 5 | La2 | 45 |
-| 4 | Ré3 | 50 |
+| 4 | Ré3 | 50 |a
 | 3 | Sol3 | 55 |
 | 2 | Si3 | 59 |
 | 1 (chanterelle) | Mi4 | 64 |
 
 Règle d'assignation : pour chaque note conservée, choisir la corde qui donne la **case la plus basse** (position la plus naturelle sur le manche).
+
+### 3.4 Règle de proximité de position
+
+Pour assurer la jouabilité enchaînée des accords et des notes, chaque position sur le manche doit rester dans un **rayon de 4 cases maximum** autour de la position précédente.
+
+| Situation | Action |
+|-----------|--------|
+| Note suivante dans un rayon ≤ 4 cases | Conserver la position |
+| Note suivante hors du rayon (> 4 cases) | Chercher une position alternative sur une autre corde |
+| Aucune alternative disponible | Autoriser le déplacement, signaler le saut de position |
+
+**Exemple :**
+```
+Accord 1 : position de référence case 3
+           → Accord 2 autorisé entre case 0 et case 7 (±4)
+           → Accord 2 hors de cette plage = chercher un renversement
+```
+
+**Principe :** Un renversement d'accord (même notes, ordre différent) permet souvent de rester dans la zone de confort sans quitter la position de la main. Cette règle favorise le legato naturel et évite les sauts de position inutiles.
 
 ---
 
@@ -98,6 +117,7 @@ Cette portée intermédiaire permet au guitariste de lire simultanément la sour
 - **Quinte altérée (♭5 ou ♯5)** → ne pas sacrifier, elle définit le caractère de l'accord
 - **Accord de substitution** → si un accord reste injouable après réduction, proposer l'accord le plus proche par mouvement chromatique minimal
 - **Notes hors tessiture** (< Mi2 ou > Mi4 en position standard) → transposer d'une octave
+- **Saut de position** (> 4 cases entre deux accords) → proposer un renversement ou une position alternative sur une corde différente
 
 ---
 
