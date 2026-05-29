@@ -66,7 +66,7 @@ Accordage standard de référence :
 |-------|------|------|
 | 6 (grave) | Mi2 | 40 |
 | 5 | La2 | 45 |
-| 4 | Ré3 | 50 |a
+| 4 | Ré3 | 50 |
 | 3 | Sol3 | 55 |
 | 2 | Si3 | 59 |
 | 1 (chanterelle) | Mi4 | 64 |
@@ -121,7 +121,44 @@ Cette portée intermédiaire permet au guitariste de lire simultanément la sour
 
 ---
 
-## 6. Comment contribuer
+## 6. Coloration des notes (Code visuel)
+
+Pour faciliter la lecture simultanée de la partition piano et de la tablature guitare, un code couleur est appliqué aux notes selon leur fonction harmonique :
+
+| Couleur | Fonction | Justification |
+|---------|----------|---------------|
+| 🔴 Rouge | Tonique (fondamentale) | Ancrage tonal — note la plus importante |
+| 🟢 Vert | Tierce (3e min ou maj) | Caractère majeur/mineur de l'accord |
+| ⚪ Neutre | Autres notes conservées | Septième, sixte, etc. |
+| ~~Barré~~ | Notes sacrifiées | Quinte, neuvième supprimées |
+
+Ce code couleur s'applique à la fois sur la portée piano et sur la tablature guitare, permettant au guitariste de repérer immédiatement les notes structurelles.
+
+---
+
+## 7. Chiffres sur la tablature
+
+Les chiffres inscrits sur les lignes de la tablature indiquent le **numéro de case** à jouer sur chaque corde :
+
+```
+E |--0-------3--|
+B |--0-------0--|
+G |--0-------0--|
+D |--2-------0--|
+A |--3-------2--|
+E |--3-------3--|
+     Em    G
+```
+
+Conventions :
+- **0** = corde à vide (case ouverte)
+- **1 à 12** = numéro de case
+- **-** = corde non jouée pour cet accord
+- Les chiffres sont alignés verticalement pour chaque accord
+
+---
+
+## 8. Comment contribuer
 
 - **Issues** — Documentez les cas où la conversion échoue (accord trop large, tessiture impossible, etc.)
 - **Documentation** — Proposez des améliorations sur les règles d'arrangement
@@ -129,7 +166,7 @@ Cette portée intermédiaire permet au guitariste de lire simultanément la sour
 
 ---
 
-## 7. Licence
+## 9. Licence
 
 Ce projet est mis à disposition sous la **Licence Apache 2.0**.
 Vous êtes libre d'utiliser, de modifier et de distribuer ce travail, sous réserve de conserver les notices de droit d'auteur.
